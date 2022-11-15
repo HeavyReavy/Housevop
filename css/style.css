@@ -1,3 +1,31 @@
+/* raleway-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/raleway-v28-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/raleway-v28-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* raleway-300 - latin_cyrillic */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+       url('../fonts/raleway-v28-latin_cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/raleway-v28-latin_cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* raleway-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/raleway-v28-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/raleway-v28-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -8,16 +36,181 @@ html {
 }
 
 body {
-  font-family: 'Merriweather';
+  font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  color: #000000;
-  background-color: white;
+  font-size: 16px;
+  line-height: 16px;
+  color: #FFFFFF;
+  background-color: #242B33;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .wrapper {
-  max-width: 1240px;
+  max-width: 1110px;
   margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header__wrapper {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 40px;
+}
+
+.menu__link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  transition: 0.2s all;
+}
+
+.menu__link:hover {
+  color: #D4C17F;
+}
+
+.menu__link:active {
+  color: #D4C17F;
+  font-weight: 700;
+}
+
+.intro {
+  padding: 300px 682px 74px 656px;
+  text-align: center;
+  background: url(../img/intro.jpg) no-repeat center;
+}
+
+.intro__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+  color: #D4C17F;
+  margin-bottom: 100px;
+}
+
+.intro__img {
+  margin-bottom: 200px;
+}
+
+.intro__text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+}
+
+.intro__text-place, .intro__text-phone {
+  padding-left: 36px;
+  position: relative;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.intro__text-place:before {
+  display: block;
+  width: 21px;
+  height: 21px;
+  content: "";
+  background: url(../img/svg/place.svg) no-repeat center;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.intro__text-phone:before {
+  display: block;
+  width: 21px;
+  height: 21px;
+  content: "";
+  background: url(../img/svg/phone.svg) no-repeat center;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.advantages {
+  padding: 120px 553px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 70px;
+}
+
+.advantage {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.advantage__img {
+  margin-bottom: 53px;
+}
+
+.advantage__description {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #FFFFFF;
+  margin: auto 0 0 0;
+  display: block;
+}
+
+.rooms__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #D4C17F;
+  margin-bottom: 100px;
+}
+
+.rooms__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 30px;
+}
+
+.room {
+  position: relative;
+  display: block;
+}
+
+.room__title {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
 }
